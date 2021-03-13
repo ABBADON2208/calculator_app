@@ -134,6 +134,12 @@ public class MainActivity extends AppCompatActivity {
                 if (numberText.getText().length() == 0)
                     Toast.makeText(MainActivity.this, "enter a number first", Toast.LENGTH_SHORT).show();
 
+                else if(numberText.getText().length() > 3)
+                {
+                    Toast.makeText(MainActivity.this, "Enter a number with length within 3 ", Toast.LENGTH_SHORT).show();
+                    numberText.setText("");
+                }
+
                 else
                 {
                     numOne = Double.parseDouble(numberText.getText() + "");
@@ -152,9 +158,19 @@ public class MainActivity extends AppCompatActivity {
 
                 else
                 {
-                    numOne = Double.parseDouble(numberText.getText() + "");
-                    numberText.setText(null);
-                    subsymbol=true;
+                    String text = numberText.getText()+"";
+                    int length =text.substring(1).length();
+
+                    if(length>3)
+                    {
+                        Toast.makeText(MainActivity.this, "Enter a number with length within 3 ", Toast.LENGTH_SHORT).show();
+                        numberText.setText("");
+                    }
+                    else {
+                        numOne = Double.parseDouble(numberText.getText() + "");
+                        numberText.setText(null);
+                        subsymbol = true;
+                    }
                 }
                 }
         });
@@ -165,6 +181,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (numberText.getText().length()==0) {
                     Toast.makeText(MainActivity.this, "Enter a valid number", Toast.LENGTH_SHORT).show();
+                    numberText.setText("");
+                }
+
+                String text = numberText.getText()+"";
+                int index = text.indexOf('.');
+                int length =text.substring(0,index).length();
+
+                if(length > 3)
+                {
+                    Toast.makeText(MainActivity.this, "Enter a number with length within 3 ", Toast.LENGTH_SHORT).show();
                     numberText.setText("");
                 }
 
@@ -183,6 +209,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (numberText.getText().length()== 0)
                     Toast.makeText(MainActivity.this, "Enter a valid number", Toast.LENGTH_SHORT).show();
+
+                else if(numberText.getText().length() > 3)
+                {
+                    Toast.makeText(MainActivity.this, "Enter a number with length within 3 ", Toast.LENGTH_SHORT).show();
+                    numberText.setText("");
+                }
 
                 else
                 {
