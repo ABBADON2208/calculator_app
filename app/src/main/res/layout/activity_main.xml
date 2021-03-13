@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/teal_200">
+
+
+        <TextView
+            android:id="@+id/edt1"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:importantForAutofill="no"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            tools:ignore="LabelFor,TextFields"
+            android:layout_marginStart="30dp" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/teal_700"
+        android:layout_below="@id/edt1"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt1"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="50dp"
+        android:text="1"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt1"
+        android:layout_alignRight="@id/button1"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="-84dp"
+        android:text="2"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt1"
+        android:layout_alignRight="@id/button2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="-84dp"
+        android:text="3"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="4"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:text="5"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="30dp"
+        android:text="6"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button6"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="50dp"
+        android:text="7"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:text="8"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="30dp"
+        android:text="9"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/button_bg_round"
+        android:layout_below="@+id/button7"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:text="+"
+        android:textSize="30sp"
+        android:padding="1dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button8"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:text="0"
+        tools:ignore="HardcodedText,PxUsage,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/button9"
+        android:layout_marginStart="218dp"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="1dp"
+        android:text="-"
+        android:textSize="31sp"
+        tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/div"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/add"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="1dp"
+        android:text="/"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/mul"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/sub"
+        android:layout_marginStart="218dp"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_bg_round"
+        android:padding="1dp"
+        android:text="*"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttondot"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="30dp"
+        android:text="."
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        tools:ignore="HardcodedText,PxUsage" />
+
+    <Button
+        android:id="@+id/buttoneql"
+        android:layout_width="62dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/buttondot"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="30dp"
+        android:text="="
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:paddingBottom="8dp"
+        tools:ignore="HardcodedText,PxUsage" />
+
+    <Button
+        android:id="@+id/buttonclear"
+        android:layout_width="62dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/buttoneql"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="30dp"
+        android:text="c"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:paddingBottom="8dp"
+        tools:ignore="HardcodedText,PxUsage" />
+
+
+</RelativeLayout>
