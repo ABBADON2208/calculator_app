@@ -1,0 +1,99 @@
+import java.util.Map;
+import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class hack{
+    
+    public static void main(String[] args) throws IOException {             
+    BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
+    Map<String,Integer> productPriceList = new HashMap<String,Integer>();
+    Map<String,Double>  productQuantityList = new HashMap<String,Double>();
+
+    System.out.println("Enter your Budget : ");
+    int budgetMoney = Integer.parseInt(sc.readLine());
+
+    for(;true;)
+    {
+    
+      System.out.println("\nEnter your choice : ");
+      System.out.println("1.Add an item");
+      System.out.println("2.Exit");
+      int choice = Integer.parseInt(sc.readLine());
+
+
+      if(choice==1)
+      {
+        System.out.println("\nEnter product : ");
+        String product = sc.readLine();
+        System.out.println("\nEnter quantity :");
+        double productQuantity=  Double.parseDouble(sc.readLine());
+        System.out.println("\nEnter Price : ");
+        int productPrice = Integer.parseInt(sc.readLine());
+
+        if(productPriceList.containsKey(product))
+        {
+           if((budgetMoney+productPriceList.get(product)-productPrice)>0)
+             budgetMoney=budgetMoney+productPriceList.get(product)-productPrice;
+             
+           else
+           {
+             System.out.println("\nproduct price is more than left budget money(" + budgetMoney+")");
+             continue;
+           }
+        }
+
+        else
+        {
+           if(productPrice>budgetMoney)
+           {
+            System.out.println("\nproduct price is more than left budget money(" + budgetMoney+")"); 
+            continue;
+           } 
+
+           else
+            budgetMoney= budgetMoney-productPrice;  
+        }
+
+        productPriceList.put(product,productPrice);
+        productQuantityList.put(product,productQuantity);
+        System.out.println("Amount left is:  " + budgetMoney);
+      }
+
+      else
+      {
+        if(budgetMoney>0)
+        {
+          System.out.println("\nYour are left with some money. you can also buy :");
+          
+          for (Map.Entry<String,Integer> entry : productPriceList.entrySet())  
+            if(budgetMoney>=entry.getValue())
+               System.out.println(entry.getKey());  
+        }
+
+        System.out.println("\ngrocery list you made is :- ");
+
+        for (Map.Entry<String,Double> entry : productQuantityList.entrySet())  
+          System.out.println(entry.getKey() + 
+                             "= " + entry.getValue() + " kg  " + productPriceList.get(entry.getKey())+ " RS ");
+
+
+        System.exit(0);
+      }
+
+      if(budgetMoney<=0)
+      {
+        System.out.println("\nYour budget money is over"+ "\n" + "grocery list you made is :- \n");
+
+        for (Map.Entry<String,Double> entry : productQuantityList.entrySet())  
+          System.out.println(entry.getKey() + 
+                             " = " + entry.getValue() + " kg  " + productPriceList.get(entry.getKey())+ " RS ");
+
+        System.exit(0); 
+      }
+
+    }
+
+    }   
+}
